@@ -1,13 +1,12 @@
 package models;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
-public class Animal {
+//Possible Interface for extenstion
+public interface Animal {
 
-    @Id
-    private Long id;
 
 }
