@@ -25,6 +25,8 @@ public class Post {
     @Column
     private String username;
 
+
+
     public Long getId() {
         return id;
     }

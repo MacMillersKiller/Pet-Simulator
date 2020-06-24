@@ -1,9 +1,7 @@
 package models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.Instant;
 
 @Entity
 public class Comment {
@@ -11,4 +9,16 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column
+    private String content;
+
+    @Column
+    private Instant createdOn;
+
+    @Column
+    private Instant updatedOn;
+
+    @Column
+    private String username;
 }
