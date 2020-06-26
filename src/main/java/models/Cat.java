@@ -4,14 +4,17 @@ import javax.persistence.*;
 import java.time.Instant;
 
 @Entity
-public class Comment {
+public class Cat implements Animal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column
-    private String content;
+    private String owner;
+
+    @Column
+    private String name;
 
     @Column
     private Instant createdOn;
@@ -19,8 +22,10 @@ public class Comment {
     @Column
     private Instant updatedOn;
 
-    @Column
-    private String username;
+    @Override
+    public Long eat(Food food) {
+        return null;
+    }
 
     public Long getId() {
         return id;
@@ -30,12 +35,20 @@ public class Comment {
         this.id = id;
     }
 
-    public String getContent() {
-        return content;
+    public String getOwner() {
+        return owner;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Instant getCreatedOn() {
@@ -53,12 +66,6 @@ public class Comment {
     public void setUpdatedOn(Instant updatedOn) {
         this.updatedOn = updatedOn;
     }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 }
+
+

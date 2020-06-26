@@ -8,5 +8,8 @@ import javax.persistence.Id;
 //Possible Interface for extenstion
 public interface Animal {
 
+    public Long eat(Food food);
+
+
 
 }
