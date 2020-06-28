@@ -10,6 +10,4 @@ public interface Animal {
 
     public Long eat(Food food);
 
-
-
 }
